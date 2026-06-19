@@ -1,6 +1,8 @@
 # Sistema de Gestión de Biblioteca
 
-API REST + aplicación web para administrar libros, autores y préstamos.
+Aplicación fullstack para administrar una biblioteca: permite registrar autores, gestionar el catálogo de libros con sus existencias, y controlar los préstamos a usuarios aplicando reglas de negocio como límites por usuario, control de stock y detección de vencidos.
+
+Incluye una **API REST** con autenticación por tokens y un **frontend web** con búsqueda en tiempo real, formularios validados y dashboard con estadísticas.
 
 ## Características
 
@@ -56,7 +58,7 @@ php artisan migrate:fresh --seed
 
 # 7. Crear usuario para autenticación
 php artisan tinker
->>> \App\Models\User::create(['name' => 'Admin', 'email' => 'admin@biblioteca.com', 'password' => bcrypt('password123')]);
+>>> \App\Models\User::create(['name' => 'Yesid Dev', 'email' => 'yesid@example.com', 'password' => bcrypt('password123')]);
 
 # 8. Levantar el servidor
 php artisan serve
@@ -157,10 +159,19 @@ Después de ejecutar los seeders tendrás:
 - 10 préstamos
 
 **Usuario para login:**
-- Email: `admin@biblioteca.com`
+- Email: `yesid@example.com`
 - Password: `password123`
 - (Debes crearlo con tinker, ver paso 7 de instalación)
 
-## Licencia
+## Comandos rápidos de prueba
 
-MIT
+```bash
+# Generar reporte
+php artisan reportes:biblioteca
+
+# Marcar préstamos vencidos
+php artisan prestamos:marcar-vencidos
+
+# Ver todas las rutas
+php artisan route:list
+```
