@@ -1,0 +1,278 @@
+/* Generado manualmente desde app.scss - Sistema de Biblioteca */
+
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #3498db;
+    --color-fondo: #f4f6f8;
+    --color-texto: #333;
+    --color-texto-claro: #666;
+    --color-exito: #27ae60;
+    --color-error: #e74c3c;
+    --color-advertencia: #f39c12;
+    --color-borde: #ddd;
+    --color-blanco: #fff;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --radio-borde: 6px;
+    --sombra-suave: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --sombra-media: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-primario);
+    margin-bottom: var(--spacing-md);
+}
+
+a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* ===== HEADER ===== */
+.app-header {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: var(--sombra-suave);
+}
+
+.app-header h1 {
+    color: var(--color-blanco);
+    font-size: 20px;
+    margin: 0;
+    display: inline-block;
+}
+
+.app-header nav {
+    display: inline-block;
+    margin-left: var(--spacing-xl);
+}
+
+.app-header nav a {
+    color: var(--color-blanco);
+    margin-right: var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radio-borde);
+    transition: background 0.2s;
+}
+
+.app-header nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.app-header nav a.active {
+    background: var(--color-secundario);
+}
+
+/* ===== CONTAINER ===== */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+/* ===== BOTONES ===== */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: var(--radio-borde);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    text-decoration: none;
+}
+
+.btn-primario { background: var(--color-secundario); color: var(--color-blanco); }
+.btn-secundario { background: var(--color-borde); color: var(--color-texto); }
+.btn-peligro { background: var(--color-error); color: var(--color-blanco); }
+.btn-exito { background: var(--color-exito); color: var(--color-blanco); }
+
+/* ===== FORMULARIOS ===== */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--color-texto);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    background: var(--color-blanco);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+}
+
+.form-group .error-msg {
+    color: var(--color-error);
+    font-size: 12px;
+    margin-top: var(--spacing-xs);
+}
+
+/* ===== TABLAS ===== */
+.tabla {
+    width: 100%;
+    background: var(--color-blanco);
+    border-collapse: collapse;
+    border-radius: var(--radio-borde);
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+}
+
+.tabla thead {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.tabla thead th {
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+}
+
+.tabla tbody tr {
+    border-bottom: 1px solid var(--color-borde);
+    transition: background 0.2s;
+}
+
+.tabla tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.tabla tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabla tbody td {
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+/* ===== TARJETAS ===== */
+.tarjeta {
+    background: var(--color-blanco);
+    border-radius: var(--radio-borde);
+    padding: var(--spacing-lg);
+    box-shadow: var(--sombra-suave);
+    border-left: 4px solid var(--color-secundario);
+}
+
+.tarjeta-exito { border-left-color: var(--color-exito); }
+.tarjeta-error { border-left-color: var(--color-error); }
+.tarjeta-advertencia { border-left-color: var(--color-advertencia); }
+
+.tarjeta-titulo {
+    font-size: 12px;
+    color: var(--color-texto-claro);
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-xs);
+}
+
+.tarjeta-valor {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* ===== ALERTAS ===== */
+.alerta {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radio-borde);
+    margin-bottom: var(--spacing-md);
+    display: none;
+}
+
+.alerta.visible {
+    display: block;
+}
+
+.alerta-exito {
+    background: #d6f5e0;
+    color: #1d7a44;
+    border-left: 4px solid var(--color-exito);
+}
+
+.alerta-error {
+    background: #fadbd8;
+    color: #922b21;
+    border-left: 4px solid var(--color-error);
+}
+
+/* ===== LOADING ===== */
+.cargando {
+    text-align: center;
+    padding: var(--spacing-lg);
+    color: var(--color-texto-claro);
+}
+
+/* ===== UTILIDADES ===== */
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mt-md { margin-top: var(--spacing-md); }
+.text-center { text-align: center; }
+.flex { display: flex; gap: var(--spacing-md); align-items: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
