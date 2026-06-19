@@ -3,6 +3,7 @@
 use App\Infrastructure\Http\Controllers\Api\AuthController;
 use App\Infrastructure\Http\Controllers\Api\LibroController;
 use App\Infrastructure\Http\Controllers\Api\PrestamoController;
+use App\Infrastructure\Http\Controllers\Api\UsuarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,4 +26,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/prestamos', [PrestamoController::class, 'index']);
     Route::post('/prestamos', [PrestamoController::class, 'store']);
     Route::put('/prestamos/{id}/devolver', [PrestamoController::class, 'devolver'])->whereNumber('id');
+
+    Route::get('/usuarios', [UsuarioController::class, 'index']);
 });
