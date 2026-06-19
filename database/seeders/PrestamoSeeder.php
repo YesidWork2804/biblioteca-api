@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Prestamo;
-use App\Models\Libro;
-use App\Models\Usuario;
+use App\Domain\Models\Prestamo;
+use App\Domain\Models\Libro;
+use App\Domain\Models\Usuario;
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 

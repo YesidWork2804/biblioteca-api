@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Autor;
+use App\Domain\Models\Autor;
 use Illuminate\Database\Seeder;
 
 class AutorSeeder extends Seeder

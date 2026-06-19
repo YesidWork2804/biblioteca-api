@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Libro;
-use App\Models\Autor;
+use App\Domain\Models\Libro;
+use App\Domain\Models\Autor;
 use Illuminate\Database\Seeder;
 
 class LibroSeeder extends Seeder
